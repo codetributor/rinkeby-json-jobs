@@ -1,0 +1,31 @@
+{
+    "name": "Get > Bytes32",
+    "initiators": [
+      {
+        "id": 3,
+        "jobSpecId": "187bb80e-5ee7-4a13-9734-cac7475f3c6e",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "187bb80e5ee74a139734cac7475f3c6e",
+        "type": "httpget"
+      },
+      {
+        "jobSpecId": "187bb80e5ee74a139734cac7475f3c6e",
+        "type": "jsonparse"
+      },
+      {
+        "jobSpecId": "187bb80e5ee74a139734cac7475f3c6e",
+        "type": "ethbytes32"
+      },
+      {
+        "jobSpecId": "187bb80e5ee74a139734cac7475f3c6e",
+        "type": "ethtx"
+      }
+    ]
+  }

@@ -1,0 +1,35 @@
+{
+    "name": "Get > Int256",
+    "initiators": [
+      {
+        "id": 2,
+        "jobSpecId": "e5b0e6ae-ab36-405b-a33a-ea12c6988ed6",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "e5b0e6aeab36405ba33aea12c6988ed6",
+        "type": "httpget"
+      },
+      {
+        "jobSpecId": "e5b0e6aeab36405ba33aea12c6988ed6",
+        "type": "jsonparse"
+      },
+      {
+        "jobSpecId": "e5b0e6aeab36405ba33aea12c6988ed6",
+        "type": "multiply"
+      },
+      {
+        "jobSpecId": "e5b0e6aeab36405ba33aea12c6988ed6",
+        "type": "ethint256"
+      },
+      {
+        "jobSpecId": "e5b0e6aeab36405ba33aea12c6988ed6",
+        "type": "ethtx"
+      }
+    ]
+  }

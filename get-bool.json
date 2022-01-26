@@ -1,0 +1,31 @@
+{
+    "name": "Get > Bool",
+    "initiators": [
+      {
+        "id": 4,
+        "jobSpecId": "99e99d6e-82be-464a-9e4b-6acc55bbcf14",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "99e99d6e82be464a9e4b6acc55bbcf14",
+        "type": "httpget"
+      },
+      {
+        "jobSpecId": "99e99d6e82be464a9e4b6acc55bbcf14",
+        "type": "jsonparse"
+      },
+      {
+        "jobSpecId": "99e99d6e82be464a9e4b6acc55bbcf14",
+        "type": "ethbool"
+      },
+      {
+        "jobSpecId": "99e99d6e82be464a9e4b6acc55bbcf14",
+        "type": "ethtx"
+      }
+    ]
+  }

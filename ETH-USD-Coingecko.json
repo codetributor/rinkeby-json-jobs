@@ -1,0 +1,47 @@
+{
+    "name": "ETH-USD Coingecko",
+    "initiators": [
+      {
+        "id": 10,
+        "jobSpecId": "5374a923-f251-4eab-84d4-79d280f76ad5",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "5374a923f2514eab84d479d280f76ad5",
+        "type": "httpget",
+        "params": {
+          "get": "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=USD"
+        }
+      },
+      {
+        "jobSpecId": "5374a923f2514eab84d479d280f76ad5",
+        "type": "jsonparse",
+        "params": {
+          "path": [
+            "ethereum",
+            "usd"
+          ]
+        }
+      },
+      {
+        "jobSpecId": "5374a923f2514eab84d479d280f76ad5",
+        "type": "multiply",
+        "params": {
+          "times": 100
+        }
+      },
+      {
+        "jobSpecId": "5374a923f2514eab84d479d280f76ad5",
+        "type": "ethint256"
+      },
+      {
+        "jobSpecId": "5374a923f2514eab84d479d280f76ad5",
+        "type": "ethtx"
+      }
+    ]
+  }

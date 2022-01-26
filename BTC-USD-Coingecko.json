@@ -1,0 +1,47 @@
+{
+    "name": "BTC-USD Coingecko",
+    "initiators": [
+      {
+        "id": 9,
+        "jobSpecId": "a8394f5e-772a-487a-8c1f-9e34aef13274",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "a8394f5e772a487a8c1f9e34aef13274",
+        "type": "httpget",
+        "params": {
+          "get": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD"
+        }
+      },
+      {
+        "jobSpecId": "a8394f5e772a487a8c1f9e34aef13274",
+        "type": "jsonparse",
+        "params": {
+          "path": [
+            "bitcoin",
+            "usd"
+          ]
+        }
+      },
+      {
+        "jobSpecId": "a8394f5e772a487a8c1f9e34aef13274",
+        "type": "multiply",
+        "params": {
+          "times": 100
+        }
+      },
+      {
+        "jobSpecId": "a8394f5e772a487a8c1f9e34aef13274",
+        "type": "ethint256"
+      },
+      {
+        "jobSpecId": "a8394f5e772a487a8c1f9e34aef13274",
+        "type": "ethtx"
+      }
+    ]
+  }

@@ -1,0 +1,35 @@
+{
+    "name": "Get > Uint256",
+    "initiators": [
+      {
+        "id": 1,
+        "jobSpecId": "3b7ca0d4-8c7a-4b2d-a926-8456665d11ae",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "3b7ca0d48c7a4b2da9268456665d11ae",
+        "type": "httpget"
+      },
+      {
+        "jobSpecId": "3b7ca0d48c7a4b2da9268456665d11ae",
+        "type": "jsonparse"
+      },
+      {
+        "jobSpecId": "3b7ca0d48c7a4b2da9268456665d11ae",
+        "type": "multiply"
+      },
+      {
+        "jobSpecId": "3b7ca0d48c7a4b2da9268456665d11ae",
+        "type": "ethuint256"
+      },
+      {
+        "jobSpecId": "3b7ca0d48c7a4b2da9268456665d11ae",
+        "type": "ethtx"
+      }
+    ]
+  }

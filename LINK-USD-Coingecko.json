@@ -1,0 +1,47 @@
+{
+    "name": "LINK-USD Coingecko",
+    "initiators": [
+      {
+        "id": 11,
+        "jobSpecId": "aaeb7ee8-98c7-4547-9d86-0eaf1769edb4",
+        "type": "runlog",
+        "params": {
+          "address": "0x3a56ae4a2831c3d3514b5d7af5578e45ebdb7a40"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "jobSpecId": "aaeb7ee898c745479d860eaf1769edb4",
+        "type": "httpget",
+        "params": {
+          "get": "https://api.coingecko.com/api/v3/simple/price?ids=chainlink&vs_currencies=USD"
+        }
+      },
+      {
+        "jobSpecId": "aaeb7ee898c745479d860eaf1769edb4",
+        "type": "jsonparse",
+        "params": {
+          "path": [
+            "chainlink",
+            "usd"
+          ]
+        }
+      },
+      {
+        "jobSpecId": "aaeb7ee898c745479d860eaf1769edb4",
+        "type": "multiply",
+        "params": {
+          "times": 100
+        }
+      },
+      {
+        "jobSpecId": "aaeb7ee898c745479d860eaf1769edb4",
+        "type": "ethint256"
+      },
+      {
+        "jobSpecId": "aaeb7ee898c745479d860eaf1769edb4",
+        "type": "ethtx"
+      }
+    ]
+  }
